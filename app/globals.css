@@ -1,0 +1,23 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background:#0E0E0E;
+  color:white;
+}
+
+
+
+.title {
+  @apply text-[34px] font-semibold text-center mb-3;
+}
+
+.subtitle {
+  @apply text-gray-400 text-center text-[14px] mb-16;
+}
+
+.btn-primary {
+  @apply bg-primary px-7 py-2 rounded-md text-sm font-medium hover:opacity-90 transition;
+}

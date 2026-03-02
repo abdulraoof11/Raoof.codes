@@ -1,0 +1,26 @@
+# Next.js build output
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# TypeScript declaration file
+next-env.d.ts
+
+# Optional: Supabase Auth
+.supabase/
+
+# Environment files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-error.log*
+pnpm-error.log*
+
+# Editor/OS files
+.DS_Store
+.idea
+.vscode
