@@ -3,13 +3,14 @@
 import { LettersPullUp } from "./LettersPullUp";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export default function Portfolio() {
   const projects = [
-    { title: "Vox Edu", url: "https://vox-edu-client.vercel.app/", img: "/vox.png" },
-    { title: "Show Coach", url: "https://www.showcoach.app/", img: "/show.png" },
-    { title: "PodifyGPT", url: "https://podifygpt.com", img: "/podifygpt.png" },
-    { title: "Codainer AI", url: "https://codainer.ai", img: "/codainer.png" },
+    { title: "Vox Edu", url: "https://vox-edu-client.vercel.app/", img: "/vox.webp" },
+    { title: "Show Coach", url: "https://www.showcoach.app/", img: "/show.webp" },
+    { title: "PodifyGPT", url: "https://podifygpt.com", img: "/podifygpt.webp" },
+    { title: "Codainer AI", url: "https://codainer.ai", img: "/codainer.webp" },
   ];
 
   return (
@@ -48,9 +49,11 @@ export default function Portfolio() {
 
                 {/* Image */}
                 <div className="overflow-hidden">
-                  <img
+                  <Image
                     src={project.img}
                     alt={project.title}
+                    width={1000}
+                    height={1000}
                     className="w-full h-64 sm:h-72 md:h-80 lg:h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
