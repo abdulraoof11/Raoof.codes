@@ -10,17 +10,27 @@ export default function Footer() {
         </h1>
 
         {/* Navigation */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-gray-400 text-sm mb-8">
-          <span className="hover:text-[#FF7A00] transition cursor-pointer">Home</span>
-          <span className="hover:text-[#FF7A00] transition cursor-pointer">Services</span>
-          <span className="hover:text-[#FF7A00] transition cursor-pointer">About Me</span>
-          <span className="hover:text-[#FF7A00] transition cursor-pointer">Portfolio</span>
-          <span className="hover:text-[#FF7A00] transition cursor-pointer">Contact Me</span>
-        </div>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-gray-400 text-sm mb-8">
+  {[
+    { name: "Home", id: "home" },
+    { name: "Services", id: "services" },
+    { name: "About Me", id: "about" },
+    { name: "Portfolio", id: "portfolio" },
+    { name: "Contact Me", id: "contact" },
+  ].map((item, i) => (
+    <a
+      key={i}
+      href={`#${item.id}`}
+      className="hover:text-[#FF7A00] transition cursor-pointer"
+    >
+      {item.name}
+    </a>
+  ))}
+</div>
 
         {/* Bottom Text */}
         <p className="text-gray-500 text-xs sm:text-sm">
-          Designed by <span className="text-white font-medium">Mahmood Fazile</span> | UI/UX Designer
+          Designed by <span className="text-white font-medium">Abdul Raoof</span> | Built with <span className="text-white font-medium">Next.js</span> | &copy; {new Date().getFullYear()} Raoof.codes. All rights reserved.
         </p>
 
       </div>
